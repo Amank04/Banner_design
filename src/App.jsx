@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import InteractiveBanner from './InterActiveBanner'
+import InteractiveBanner from './InteractiveBanner'
 
 function App() {
   const [count, setCount] = useState(0)
