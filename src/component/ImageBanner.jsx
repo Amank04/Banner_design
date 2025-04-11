@@ -14,11 +14,8 @@ const animationVariants = {
 };
 
 const ImageBanner = ({ settings, darkMode }) => {
-  // Use the banner's defined height (or fallback to 400px)
-  const bannerHeight = settings.bannerSize?.height ? `${settings.bannerSize.height}px` : '400px';
-
   return (
-    <div className="relative w-full" style={{ height: bannerHeight, overflow: 'hidden' }}>
+    <div className="relative w-full h-full overflow-hidden">
       {settings.bgImage && (
         <img
           src={settings.bgImage}

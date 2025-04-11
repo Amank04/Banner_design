@@ -1,4 +1,3 @@
-// InteractiveBanner.jsx
 import React, { useState, useRef } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -43,7 +42,7 @@ const InteractiveBanner = () => {
   return (
     <div
       data-testid="interactive-banner-container"
-      className={`${darkMode ? "dark" : ""} relative flex flex-col md:flex-row min-h-fit transition-all duration-500 ${
+      className={`${darkMode ? "dark" : ""} relative flex flex-col md:flex-row h-screen transition-all duration-500 ${
         darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"
       }`}
     >
@@ -53,8 +52,8 @@ const InteractiveBanner = () => {
       >
         {showControls ? <X size={28} /> : <Menu size={28} />}
       </button>
-      {/* Wrap the banner in a container and assign its ref */}
-      <div ref={bannerRef}>
+      {/* Wrap the banner in a container with full-screen dimensions and assign its ref */}
+      <div ref={bannerRef} className="w-full h-full">
         <BannerComponent settings={settings} darkMode={darkMode} />
       </div>
       {/* Preview button positioned at bottom-left */}
