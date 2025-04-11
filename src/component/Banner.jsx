@@ -14,12 +14,16 @@ const animationVariants = {
 };
 
 const Banner = ({ settings, darkMode }) => {
+  // Compute the banner height using the selected banner size option.
+  const bannerHeight = settings.bannerSize?.height ? `${settings.bannerSize.height}px` : '400px';
+
   return (
     <div
-      className="relative flex items-center justify-center h-[60vh] md:h-screen transition-all duration-700"
+      className="relative flex items-center justify-center transition-all duration-700"
       style={{
+        height: bannerHeight,
         background: settings.bgImage
-          ? `url(${settings.bgImage}) center/contain no-repeat`
+          ? `url(${settings.bgImage}) center/cover no-repeat`
           : settings.bgColor || 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         filter: settings.filter?.value || 'none',
       }}
