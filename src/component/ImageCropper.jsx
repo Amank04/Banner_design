@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import Cropper from 'react-easy-crop';
-import 'react-easy-crop/react-easy-crop.css'; // ensure cropper CSS is imported
+import 'react-easy-crop/react-easy-crop.css';
 import getCroppedImg from './cropImage';
 
 const ImageCropper = ({ imageSrc, aspect, outputDimensions, onCropComplete, onCancel }) => {
@@ -27,7 +27,7 @@ const ImageCropper = ({ imageSrc, aspect, outputDimensions, onCropComplete, onCa
     position: 'relative',
     width: outputDimensions?.width || '100%',
     height: outputDimensions?.height || 300,
-    background: '#333' // a fallback background (optional)
+    background: '#333' // fallback background
   };
 
   return (
@@ -40,6 +40,8 @@ const ImageCropper = ({ imageSrc, aspect, outputDimensions, onCropComplete, onCa
             crop={crop}
             zoom={zoom}
             aspect={aspect}
+            // Setting cropSize to the desired output dimensions
+            cropSize={{ width: outputDimensions.width, height: outputDimensions.height }}
             onCropChange={setCrop}
             onZoomChange={setZoom}
             onCropComplete={onCropCompleteCallback}

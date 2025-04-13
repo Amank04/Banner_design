@@ -42,7 +42,7 @@ const InteractiveBanner = () => {
   return (
     <div
       data-testid="interactive-banner-container"
-      className={`${darkMode ? "dark" : ""} relative flex flex-col md:flex-row h-screen transition-all duration-500 ${
+      className={`${darkMode ? "dark" : ""} relative flex flex-col md:flex-row ${settings.bgImage ? "h-screen":""} transition-all duration-500 ${
         darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"
       }`}
     >
