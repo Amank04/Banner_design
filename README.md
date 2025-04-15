@@ -1,12 +1,97 @@
-# React + Vite
+# 🎨 Banner Design App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal front-end React application built with **Vite** and **Tailwind CSS**, designed for creating or showcasing clean, responsive banner components.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+Check out the live version here:  
+👉 [banner-design-iota.vercel.app](https://banner-design-iota.vercel.app)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧰 Tech Stack
+
+- ⚛️ [React](https://reactjs.org/)
+- ⚡ [Vite](https://vitejs.dev/)
+- 🎨 [Tailwind CSS](https://tailwindcss.com/)
+- 🧹 [ESLint](https://eslint.org/) for code linting
+
+---
+
+## 📁 Project Structure
+
+```text
+Banner_design/
+│
+├── public/                            # Static files
+│   ├── vite.svg
+│   └── wiki_logo.png
+│
+├── src/                               # Main application source
+│   ├── __tests__/                     # Test files
+│   │   └── InteractiveBanner.test.jsx
+│   │
+│   ├── assets/                        # Static assets (SVGs, images, etc.)
+│   │   └── react.svg
+│   │
+│   ├── component/                     # Reusable React components
+│   │   ├── Banner.jsx
+│   │   ├── ImageBanner.jsx
+│   │   ├── ImageCropper.jsx
+│   │   ├── PreviewModal.jsx
+│   │   ├── SettingsPanel.jsx
+│   │   └── cropImage.js              # Utility for image cropping
+│   │
+│   ├── hooks/                         # Custom React hooks
+│   │   └── useLocalStorage.js
+│   │
+│   ├── App.css
+│   ├── App.jsx                        # Main app layout
+│   ├── InteractiveBanner.jsx         # Interactive banner feature
+│   ├── index.css                     # Global styles including Tailwind
+│   ├── main.jsx                      # Entry point
+│   └── setupTests.js                 # Test setup file
+│
+├── .babelrc                          # Babel configuration
+├── .gitignore
+├── README.md
+├── eslint.config.js                 # ESLint configuration
+├── index.html                       # Base HTML template
+├── package.json
+├── package-lock.json
+├── postcss.config.js               # PostCSS + Tailwind setup
+├── tailwind.config.js              # Tailwind CSS config
+└── vite.config.js                  # Vite build tool config
+```
+
+---
+
+## 🛠️ Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Amank04/Banner_design.git
+cd Banner_design
+```
+### 2. Install Dependencies
+```bash
+npm install
+```
+### 3. Start the Development server
+```bash
+npm run dev
+```
+
+### 4. Build for Production
+```bash
+npm run build
+```
+### 5. Lint the code
+```bash
+npm run lint
+```
+
+✨ Feel free to fork this repository, contribute with improvements, or use it as a starter template for your own creative banner design projects!
